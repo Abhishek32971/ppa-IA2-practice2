@@ -1,1 +1,16 @@
-
+ gcc -g p4original.c
+ ./a.out
+enter the size of the array
+5
+enter the number into array
+1
+enter the number into array
+2
+enter the number into array
+7
+enter the number into array
+8
+enter the number into array
+12
+20
+ 

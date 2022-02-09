@@ -1,1 +1,10 @@
-
+gcc -g p2original.c
+ ./a.out
+enter the side of the triangle:
+2
+enter the side of the triangle:
+2
+enter the side of the triangle:
+1
+the entered triangle is not scaline triangle
+ 

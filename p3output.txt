@@ -1,1 +1,14 @@
-
+ gcc -g p3original.c
+ ./a.out
+enter the number
+7
+7 is not a composite number
+ ./a.out
+enter the number
+8
+8 is a composite number
+ ./a.out
+enter the number
+5
+5 is not a composite number
+ 

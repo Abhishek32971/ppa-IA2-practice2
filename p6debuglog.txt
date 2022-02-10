@@ -1,0 +1,103 @@
+db ./a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from ./a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x885: file p6final.c, line 23.
+(gdb) n
+The program is not being run.
+(gdb) r
+Starting program: /home/runner/ppa-IA2-practice2-2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p6final.c:23
+23  {
+(gdb) n
+25      input_string(a);
+(gdb) s
+input_string (a=0x7ffc702d43a4 "HV") at p6final.c:5
+5       printf("enter the string\n");
+(gdb) n
+enter the string
+6       scanf("%s", a);
+(gdb) n
+hello
+7   }
+(gdb) p a
+$1 = 0x7ffc702d43a4 "hello"
+(gdb) n
+main () at p6final.c:26
+26      str_reverse(a, re);
+(gdb) s
+str_reverse (a=0x7ffc702d43a4 "hello", re=0x7ffc702d43ae "") at p6final.c:10
+10      int n = strlen(a);
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p n
+$2 = 5
+(gdb) n
+14          re[i] = a[j];
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p re
+$3 = 0x7ffc702d43ae "o"
+(gdb) n
+14          re[i] = a[j];
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p re
+$4 = 0x7ffc702d43ae "ol\240D-p\374\177"
+(gdb) n
+14          re[i] = a[j];
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p re
+$5 = 0x7ffc702d43ae "ollD-p\374\177"
+(gdb) n
+14          re[i] = a[j];
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p re
+$6 = 0x7ffc702d43ae "olle-p\374\177"
+(gdb) n
+14          re[i] = a[j];
+(gdb) n
+12      for (int i = 0, j = n - 1; j >= 0; i++, j--)
+(gdb) p a
+$7 = 0x7ffc702d43a4 "hello"
+(gdb) n
+16      re[n] = '\0';
+(gdb) p re
+$8 = 0x7ffc702d43ae "ollehp\374\177"
+(gdb) n
+17  }
+(gdb) p re
+$9 = 0x7ffc702d43ae "olleh"
+(gdb) n
+main () at p6final.c:27
+27      output(a, re);
+(gdb) s
+output (a=0x7ffc702d43a4 "hello", re=0x7ffc702d43ae "olleh") at p6final.c:20
+20      printf("the reverse of %s is %s\n", a, re);
+(gdb) n
+the reverse of hello is olleh
+21  }
+(gdb) n
+main () at p6final.c:28
+28      return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 2141) exited normally]
+(gdb) 

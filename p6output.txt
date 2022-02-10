@@ -1,1 +1,7 @@
-
+gcc -g p6final.c
+ ./.aout
+bash: ./.aout: No such file or directory
+ ./a.out
+enter the string
+hello
+the reverse of hello is olleh

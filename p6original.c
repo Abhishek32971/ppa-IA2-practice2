@@ -13,7 +13,7 @@ void str_reverse(char *a, char *re)
     {
         re[i] = a[j];
     }
-    //re[n] = '\0';
+    re[n] = '\0';
 }
 void output(char *a, char *re)
 {

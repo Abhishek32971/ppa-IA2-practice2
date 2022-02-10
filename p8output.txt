@@ -1,1 +1,13 @@
-
+./a.out
+How many triangles will you enter:
+2
+Enter the base, altitude of a triangle:
+2
+3
+Enter the base, altitude of a triangle:
+2
+3
+2.000000, 3.000000 and
+2.000000, 3.000000
+is
+triangle with base = 2.000000 and altitude = 3.000000 having area = 3.000000
